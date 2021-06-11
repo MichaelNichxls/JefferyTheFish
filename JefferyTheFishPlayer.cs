@@ -15,7 +15,7 @@ namespace JefferyTheFish
             if (junk)
                 return;
 
-            if (player.ZoneBeach && Main.hardMode && Main.rand.NextBool(400))
+            if (player.ZoneBeach && Main.hardMode && Main.rand.NextBool(player.fishingSkill >= 100 ? 200 : player.fishingSkill >= 50 ? 300 : 400))
                 caughtType = ModContent.ItemType<PaperInABottle>();
         }
     }
